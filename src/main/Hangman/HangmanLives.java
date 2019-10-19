@@ -2,8 +2,12 @@
 public class HangmanLives {
     private int livesCount;
 
+    public int getLivesCount() {
+        return livesCount;
+    }
+
     public HangmanLives(int livesCount) {
-        this.livesCount  = livesCount;
+        this.livesCount = livesCount;
     }
 
     public int correctChar() {
@@ -15,9 +19,11 @@ public class HangmanLives {
         return livesCount;
     }
 
-    public String isOver() {
-        if (livesCount < 1) ;
-        String isOver = "Is over.";
-        return isOver;
+    public boolean isOver() {
+        if (livesCount < 1) {
+            System.out.println("Is over.");
+            return true;
+        }
+        return false;
     }
 }
